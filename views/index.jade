@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    #app
+    ul#t1
+      if(typeof orgs != "undefined")
+        each org in orgs
+          li org.teamname
+      
+    //- ul#t1
+    //-   li
+    //-     span.caret Beverages
+    //-     ul.nested
+    //-       li Water
+    //-       li Coffee
+    //-       li
+    //-         span.caret Tea
+    //-         ul.nested
+    //-           li Black Tea
+    //-           li White Tea
+    //-           li
+    //-             span.caret Green Tea
+    //-             ul.nested
+    //-               li Sencha
+    //-               li Gyokuro
+    //-               li Matcha
+    //-               li Pi Lo Chun
+    //- ul#t1 
+    //-   if (typeof employees === "undefined")
+    //-     li
+    //-   else
+    //-     each employee in employees
+    //-       li #{employee.name}
+    //- table.table.table-striped.table-bordered
+    //-   tr
+    //-     td Name
+    //-     td Category
+    //-     td Date
+    //-     td Complete
+    //-   if (typeof tasks === "undefined")
+    //-     tr
+    //-       td
+    //-   else
+    //-     each task in tasks
+    //-       tr
+    //-         td #{task.name}
+    //-         td #{task.category}
+    //-         td 
+    script(src='/javascripts/index.js')
