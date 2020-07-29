@@ -25,10 +25,13 @@ const { Item } = require("@azure/cosmos");
           }
       });
 
-     res.render("index", {
-       orgs: orgs,
-       teams: items
-     });
+     res.locals.orgs = orgs;
+     res.locals.teams = items;
+     res.render("index", {data: orgs});
+
+    //  res.render("C:\Users\Sathvik\Documents\hack2020\public\index.html", {
+    //   name:"example"
+    // });
    }
  }
 

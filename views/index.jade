@@ -7,7 +7,10 @@ html
     ul#t1
       if(typeof orgs != "undefined")
         each org in orgs
-          li org.teamname
+          li 
+            //- button(onclick='#{something(items,org)}')
+            span.caret #{org.teamname}
+            
       
     //- ul#t1
     //-   li

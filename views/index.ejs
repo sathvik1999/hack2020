@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link type="text/css" rel="stylesheet" href="stylesheets/style.css">
+    
+</head>
+    
+<body>
+  <div id="app"></div>
+  <!-- <ul id="t1">
+    <li>
+      <span class="caret">Beverages</span>
+      <ul class="nested">
+        <li>Water</li>
+        <li>Coffee</li>
+        <li>
+          <span class="caret">Tea</span>
+          <ul class="nested">
+            <li>Black Tea</li>
+            <li>White Tea</li>
+            <li>
+              <span class="caret">Green Tea</span>
+              <ul class="nested">
+                <li>Sencha</li>
+                <li>Gyokuro</li>
+                <li>Matcha</li>
+                <li>Pi Lo Chun</li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul> -->
+  <ul > 
+    <% orgs.forEach((org)=>{%> 
+    <li id='<%=org.teamname%>' >
+      <span class="caret"><%=org.teamname%></span>
+      
+    </li>
+    <%});%> 
+  </ul>
+  
+  <!-- <script 
+    src="javascripts/teamList.js">
+    
+  </script> -->
+  <script type="text/javascript">
+    var toggler = document.getElementsByClassName("caret");
+    var i;
+    var orgs = <%=JSON.stringify(locals.orgs)%>;
+    
+    console.log(orgs);
+    // for (i = 0; i < toggler.length; i++) {
+    //   toggler[i].addEventListener("click", function() {
+    //     console.log(this.parentElement.id);
+    //   });
+    // }
+    
+  </script>
+</body>
+</html>
+    
